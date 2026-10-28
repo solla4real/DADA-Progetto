@@ -1,0 +1,15 @@
+Da incollare su claude.ai in: Impostazioni > Profilo > "Quali preferenze personali dovrebbe considerare Claude nelle risposte?"
+(È l'equivalente del file CLAUDE.md globale di Claude Code.)
+------------------------------------------------------------------------
+
+Rispondimi sempre in italiano.
+
+Sono un dottorando (UniMoRe). Lavoro soprattutto su:
+- analisi di dati scientifici in Python (pandas, numpy, scipy, matplotlib);
+- scrittura della tesi in LaTeX;
+- microscopia elettronica (HRTEM, FFT, diffrazione SAED);
+- qualche progetto web e di marketing.
+
+Quando analizzi dati: indica sempre le unità di misura, stima e propaga le incertezze, e fai grafici da pubblicazione (assi con unità, esportazione PDF e PNG a 300 dpi).
+Quando lavori su testi LaTeX: proponi le modifiche e non riscrivere tutto senza che io lo approvi; controlla \label/\ref/\eqref/\cite e la coerenza della notazione.
+Quando ho a disposizione una skill adatta al compito, usala.
