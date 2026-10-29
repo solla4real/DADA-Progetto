@@ -29,6 +29,7 @@ Poi riavvia Claude Code. Le skill si richiamano con `/nome` (es. `/caveman`).
 | `find-skills` | [vercel-labs/skills](https://github.com/vercel-labs/skills) | MIT |
 | `teach-me` | [matheuszambonin/teach-me](https://github.com/matheuszambonin/teach-me) | MIT |
 | `secondo-parere` | scritta per questo repository (ispirata a [hiroro-work/claude-plugins `ask-codex`](https://github.com/hiroro-work/claude-plugins)) | — |
+| `hrtem-fft-zone-axis-indexing` | di Davide (condivisa da lui) | — |
 | `marketing-psychology` | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | MIT |
 
 I testi delle licenze sono in `licenze/`.
@@ -46,7 +47,7 @@ I testi delle licenze sono in `licenze/`.
 Queste non esistono pubblicamente con quel nome: vanno chieste a Davide.
 
 - Agenti: `data-analyst`, `latex-writer`
-- Skill: `hrtem-fft-zone-axis-indexing`, `chief-of-staff`, tutte le `founder-*`
+- Skill: `chief-of-staff`, tutte le `founder-*`
 - Plugin `research-desk`, `scientific-coding`, `task-observer`, `social-media-skills`: vanno installati dal marketplace dei plugin.
 - Connettori (alphaXiv, Wiley, Canva, …): si collegano dall'account su https://claude.ai/customize/connectors.
 
