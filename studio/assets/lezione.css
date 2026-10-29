@@ -1,0 +1,48 @@
+/* Stile comune di lezioni e schede di riferimento */
+:root {
+  --bg: #fffff8; --fg: #1d1d1b; --muted: #6b6b66; --line: #ddd8c8;
+  --accent: #8a3b12; --ok: #2f6b3a; --ko: #a3271b; --box: #f4f1e6;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1b1b19; --fg: #ecebe4; --muted: #a3a29a; --line: #3b3a35;
+          --accent: #e39a6b; --ok: #7fc28c; --ko: #ef8a7d; --box: #26261f; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0 auto; max-width: 42rem; padding: 2rem 1rem 4rem;
+  background: var(--bg); color: var(--fg);
+  font: 1.08rem/1.6 Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+}
+h1 { font-size: 1.9rem; line-height: 1.2; margin: .2rem 0 1rem; }
+h2 { font-size: 1.25rem; margin: 2.2rem 0 .6rem; color: var(--accent); }
+.skim { font-style: italic; color: var(--muted); border-left: 3px solid var(--line); padding-left: .8rem; }
+.domanda { font-size: 1.15rem; }
+.nota { color: var(--muted); font-size: .95rem; }
+table { border-collapse: collapse; margin: .8rem 0; width: 100%; }
+th, td { border-bottom: 1px solid var(--line); padding: .35rem .5rem; text-align: left; }
+code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .92em; }
+.formula { background: var(--box); padding: .6rem .9rem; border-radius: 6px; font-family: ui-monospace, Menlo, Consolas, monospace; }
+svg { display: block; margin: 1rem auto; max-width: 100%; height: auto; }
+svg text { fill: var(--fg); font-family: Georgia, serif; }
+
+/* Esempio svolto nascosto: si apre solo dopo aver provato */
+details { background: var(--box); border-radius: 6px; padding: .6rem 1rem; margin: 1rem 0; }
+details summary { cursor: pointer; font-weight: bold; color: var(--accent); }
+details[open] summary { margin-bottom: .5rem; }
+
+/* Quiz */
+.quiz { border: 1px solid var(--line); border-radius: 8px; padding: .8rem 1rem; margin: 1rem 0; }
+.quiz p { margin: 0 0 .5rem; font-weight: bold; }
+.quiz button {
+  display: block; width: 100%; text-align: left; margin: .3rem 0; padding: .5rem .7rem;
+  border: 1px solid var(--line); border-radius: 6px; background: transparent; color: var(--fg);
+  font: inherit; cursor: pointer;
+}
+.quiz button.giusta { border-color: var(--ok); color: var(--ok); font-weight: bold; }
+.quiz button.sbagliata { border-color: var(--ko); color: var(--ko); text-decoration: line-through; }
+.quiz .esito { margin-top: .4rem; font-size: .95rem; }
+
+@media print {
+  details { display: block; } details > * { display: block !important; }
+  .quiz button { border: none; }
+}

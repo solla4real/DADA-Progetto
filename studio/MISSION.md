@@ -1,7 +1,7 @@
 # Missione: le basi dell'analisi HRTEM per costruire l'app di indicizzazione
 
 ## Perché
-Devo costruire, insieme a Davide, un'applicazione che trasforma un'immagine al microscopio elettronico (HRTEM) in dati cristallografici: dalla FFT dell'immagine alle distanze tra piani, agli angoli, fino all'asse di zona e agli indici hkl. Deve farlo senza dipendere da programmi esterni. Per progettarla devo capire cosa calcola ogni passaggio e perché.
+Devo costruire, insieme a Davide, un'applicazione che trasforma la FFT di un'immagine al microscopio elettronico (HRTEM) in dati cristallografici (in futuro magari partendo direttamente dall'immagine): dalla FFT alle distanze tra piani, agli angoli, fino all'asse di zona e agli indici hkl. Deve farlo senza dipendere da programmi esterni. Per progettarla devo capire cosa calcola ogni passaggio e perché.
 
 ## Quando potrò dire "ci sono"
 - Spiego a parole mie cos'è un cristallo e cosa vuol dire che una sostanza cristallizza.
@@ -16,5 +16,6 @@ Devo costruire, insieme a Davide, un'applicazione che trasforma un'immagine al m
 - Imparo per costruire un software: mi serve capire l'algoritmo più che la teoria fine a sé stessa.
 
 ## Lasciato fuori per ora
+- Formati dei file del microscopio (.dm3/.dm4) e calibrazione dei pixel: Davide non li ha indicati come necessari.
 - Matematica e formule in dettaglio (diffrazione, trasformata di Fourier "a mano"): prima i concetti. Torneranno quando si scrive il codice dell'app.
 - Il codice Python per l'analisi dei dati.

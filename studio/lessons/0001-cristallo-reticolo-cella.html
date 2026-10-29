@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="chunk" content="knowledge">
+<title>Lezione 1 · Cristallo, reticolo, cella</title>
+<link rel="stylesheet" href="../assets/lezione.css">
+</head>
+<body>
+
+<p class="skim">Prima di leggere: per un minuto guarda solo i titoli e il disegno. Poi parti dall'inizio.</p>
+
+<h1>Lezione 1 · Cristallo = reticolo + motivo</h1>
+
+<h2>La domanda</h2>
+<p class="domanda">Che cosa vuol dire, esattamente, che una sostanza è un <strong>cristallo</strong>?</p>
+<p>La vostra app confronta un'immagine con un cristallo "candidato". Per farlo, il cristallo deve diventare un <em>modello dati</em>. Oggi vediamo qual è quel modello.</p>
+
+<h2>Dove siamo</h2>
+<p>È il primo pezzo: non serve sapere niente. Da qui, la prossima lezione parlerà dei <em>piani</em> di atomi e dei loro nomi (h k l), che sono ciò che l'app deve restituire.</p>
+
+<h2>L'idea</h2>
+<p>In un cristallo gli atomi non sono sparsi a caso: un piccolo gruppo di atomi si <strong>ripete identico</strong>, sempre con lo stesso passo, in tutte e tre le direzioni. Come le piastrelle di un pavimento, ma in 3D.</p>
+<p>Per descriverlo bastano due ingredienti:</p>
+<ul>
+  <li><strong>Reticolo</strong>: la griglia di punti che dice <em>dove</em> si ripete il disegno.</li>
+  <li><strong>Motivo</strong>: il gruppetto di atomi che si mette su <em>ogni</em> punto della griglia.</li>
+</ul>
+<p class="formula">struttura cristallina = reticolo + motivo</p>
+
+<svg viewBox="0 0 360 200" role="img" aria-label="Griglia di punti con lo stesso motivo di due atomi ripetuto su ogni punto; una cella evidenziata">
+  <g stroke="currentColor" stroke-opacity=".25">
+    <line x1="30" y1="40" x2="330" y2="40"/><line x1="30" y1="100" x2="330" y2="100"/><line x1="30" y1="160" x2="330" y2="160"/>
+    <line x1="30" y1="40" x2="30" y2="160"/><line x1="130" y1="40" x2="130" y2="160"/><line x1="230" y1="40" x2="230" y2="160"/><line x1="330" y1="40" x2="330" y2="160"/>
+  </g>
+  <rect x="130" y="100" width="100" height="60" fill="none" stroke="#c0602a" stroke-width="3"/>
+  <g>
+    <!-- motivo: un atomo grande sul punto, uno piccolo spostato -->
+    <defs><g id="m"><circle r="7" fill="#4a6fa5"/><circle cx="22" cy="-14" r="4" fill="#c0602a"/></g></defs>
+    <use href="#m" x="30" y="40"/><use href="#m" x="130" y="40"/><use href="#m" x="230" y="40"/><use href="#m" x="330" y="40"/>
+    <use href="#m" x="30" y="100"/><use href="#m" x="130" y="100"/><use href="#m" x="230" y="100"/><use href="#m" x="330" y="100"/>
+    <use href="#m" x="30" y="160"/><use href="#m" x="130" y="160"/><use href="#m" x="230" y="160"/><use href="#m" x="330" y="160"/>
+  </g>
+  <text x="180" y="188" text-anchor="middle" font-size="13">cella: lati a (orizzontale) e b (verticale)</text>
+</svg>
+
+<p>Il mattoncino che, ripetuto, ricostruisce tutto si chiama <strong>cella elementare</strong>. La sua forma è data da sei numeri, i <strong>parametri di cella</strong>: le lunghezze dei tre lati <code>a, b, c</code> e i tre angoli fra loro <code>α, β, γ</code>. Le lunghezze si misurano in <strong>ångström</strong> (1 Å = 0,1 nm = 10⁻¹⁰ m).</p>
+<p>Il materiale di Davide, l'<strong>LFP</strong> (LiFePO₄), ha una cella <em>ortorombica</em>: tre angoli di 90° e tre lati diversi, circa a = 10,33 Å, b = 6,01 Å, c = 4,69 Å.</p>
+
+<details>
+  <summary>Esempio svolto: prova da solo, poi apri</summary>
+  <p><strong>Problema.</strong> Un granello di LFP è lungo 100 nm nella direzione dell'asse a. Quante celle ci sono, in fila, lungo quella direzione?</p>
+  <ol>
+    <li>Porto tutto nella stessa unità: 100 nm = 1000 Å. <em>Perché questo passo viene prima degli altri?</em></li>
+    <li>Ogni cella occupa a = 10,33 Å lungo quella direzione.</li>
+    <li>1000 Å ÷ 10,33 Å ≈ 97 celle. <em>Perché divido per a e non per b o c?</em></li>
+  </ol>
+  <p>Unità prima di tutto: è la regola n. 1 anche nella skill di Davide.</p>
+</details>
+
+<h2>Esercizi</h2>
+<div class="quiz"><p>1. Che cosa descrive completamente una struttura cristallina?</p>
+  <button data-why="Serve anche sapere quali atomi stanno su ogni punto.">Solo la griglia dei punti</button>
+  <button data-ok data-why="La griglia dice dove, il motivo dice cosa.">Il reticolo più il motivo</button>
+  <button data-why="Il tipo di atomi non dice come sono disposti.">Solo l'elenco degli atomi</button>
+</div>
+<div class="quiz"><p>2. Quali numeri danno forma e dimensioni della cella?</p>
+  <button data-why="Questi servono a dare un nome ai piani: lezione 2.">Gli indici h k l</button>
+  <button data-why="Le coordinate degli atomi descrivono il motivo, non la cella.">Le coordinate degli atomi</button>
+  <button data-ok data-why="Tre lunghezze e tre angoli.">a, b, c, α, β, γ</button>
+</div>
+<div class="quiz"><p>3. Quanti ångström sono 2 nanometri?</p>
+  <button data-why="1 nm = 10 Å, quindi si moltiplica per 10.">0,2 Å</button>
+  <button data-ok data-why="2 × 10 = 20.">20 Å</button>
+  <button data-why="Troppo: 1 nm è 10 Å, non 100.">200 Å</button>
+</div>
+<div class="quiz"><p>4. Un articolo dà per l'LFP a = 10,33 e b = 6,01 Å; un altro dà a = 6,01 e b = 10,33 Å. Cosa concludi?</p>
+  <button data-why="I numeri sono gli stessi, cambia solo il nome dato agli assi.">Sono due materiali diversi</button>
+  <button data-why="Le misure coincidono: nessun errore, solo una convenzione diversa.">Uno dei due ha sbagliato</button>
+  <button data-ok data-why="Stessa cella, assi chiamati in modo diverso. La skill di Davide (sezione 8) la chiama la trappola più costosa.">Stessa cella, assi scambiati</button>
+</div>
+
+<h2>Fonte principale</h2>
+<p><a href="https://www.doitpoms.ac.uk/tlplib/crystallography3/">DoITPoMS (Università di Cambridge), <em>Crystallography</em></a>: reticolo, parametri di cella e motivo, con esempi interattivi. Definizione ufficiale di cella: <a href="https://dictionary.iucr.org/Unit_cell">IUCr, Online Dictionary of Crystallography</a>. Parametri dell'LFP: <a href="https://arxiv.org/pdf/1111.6569">arXiv 1111.6569</a>.</p>
+<p class="nota">Scheda da tenere a portata di mano: <a href="../reference/cristallo-e-cella.html">Cristallo e cella elementare</a>.</p>
+
+<h2>Domanda da portarti via</h2>
+<p>Se un'immagine al microscopio mostra un disegno che si ripete con un passo regolare, che cosa ti dice quel passo sul cristallo? E perché un calcolo che "cerca le ripetizioni" (la FFT) dovrebbe essere lo strumento giusto?</p>
+
+<h2>Domande?</h2>
+<p>Scrivile a Claude in chat in qualsiasi momento: sono io il tuo insegnante.</p>
+
+<script src="../assets/quiz.js"></script>
+</body>
+</html>
